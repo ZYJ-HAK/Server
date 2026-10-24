@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZYJ_HAK · 个人主页</title>
+  <meta name="description" content="ZYJ_HAK 的个人主页 — 开发者，创造者。用代码把想法变成现实。" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <!-- 背景装饰 -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--a" aria-hidden="true"></div>
+  <div class="bg-blob bg-blob--b" aria-hidden="true"></div>
+
+  <!-- 顶部导航 -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a class="nav__brand" href="#top" aria-label="回到顶部">
+        <svg class="nav__mark" viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="2"  y="2"  width="5" height="5" rx="1"/>
+          <rect x="9"  y="2"  width="5" height="5" rx="1" opacity=".45"/>
+          <rect x="16" y="2"  width="5" height="5" rx="1" opacity=".15"/>
+          <rect x="2"  y="9"  width="5" height="5" rx="1" opacity=".45"/>
+          <rect x="9"  y="9"  width="5" height="5" rx="1"/>
+          <rect x="16" y="9"  width="5" height="5" rx="1" opacity=".45"/>
+          <rect x="2"  y="16" width="5" height="5" rx="1" opacity=".15"/>
+          <rect x="9"  y="16" width="5" height="5" rx="1" opacity=".45"/>
+          <rect x="16" y="16" width="5" height="5" rx="1"/>
+        </svg>
+        <span class="nav__name">ZYJ_HAK</span>
+      </a>
+      <nav class="nav__links" aria-label="页面导航">
+        <a href="#about">关于</a>
+        <a href="#skills">技能</a>
+        <a href="#projects">项目</a>
+        <a href="#contact">联系</a>
+      </nav>
+      <a class="nav__gh" href="https://github.com/ZYJ-HAK" target="_blank" rel="noopener noreferrer">
+        <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-github">
+          <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/>
+        </svg>
+        <span>GitHub</span>
+      </a>
+      <button class="nav__burger" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span>
+      </button>
+    </div>
+    <div class="nav__mobile" id="mobile-menu" hidden>
+      <a href="#about">关于</a>
+      <a href="#skills">技能</a>
+      <a href="#projects">项目</a>
+      <a href="#contact">联系</a>
+      <a href="https://github.com/ZYJ-HAK" target="_blank" rel="noopener noreferrer">GitHub</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero" aria-label="简介">
+      <div class="container hero__grid">
+        <div class="hero__copy">
+          <p class="hero__badge reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            欢迎来到我的数字角落
+          </p>
+          <h1 class="hero__title reveal" data-delay="1">
+            用代码，<br />把想法<span class="hero__title-accent">变成现实</span>。
+          </h1>
+          <p class="hero__typer reveal" data-delay="2" aria-live="polite">
+            <span class="hero__typer-prefix">&gt;_</span>
+            <span id="typer" class="hero__typer-text"></span><span class="caret" aria-hidden="true"></span>
+          </p>
+          <p class="hero__desc reveal" data-delay="3">
+            我是 ZYJ_HAK，一名热爱创造的开发者。喜欢打磨产品的每一个像素，
+            也享受解决复杂问题时的逻辑之美。这里记录我的项目、技能与思考。
+          </p>
+          <div class="hero__actions reveal" data-delay="4">
+            <a class="btn btn--primary" href="#projects">
+              查看我的项目
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="btn__arrow"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="https://github.com/ZYJ-HAK?tab=repositories" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-github"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+              浏览仓库
+            </a>
+          </div>
+          <dl class="hero__stats reveal" data-delay="5" id="hero-stats" aria-label="GitHub 数据">
+            <div class="stat">
+              <dt>公开仓库</dt>
+              <dd class="stat__num" data-stat="repos">—</dd>
+            </div>
+            <div class="stat">
+              <dt>关注者</dt>
+              <dd class="stat__num" data-stat="followers">—</dd>
+            </div>
+            <div class="stat">
+              <dt>关注中</dt>
+              <dd class="stat__num" data-stat="following">—</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="hero__visual reveal" data-delay="3">
+          <figure class="portrait">
+            <div class="portrait__frame">
+              <img src="https://avatars.githubusercontent.com/u/207816676?v=4&s=400" alt="ZYJ_HAK 的头像" width="400" height="400" loading="eager" />
+            </div>
+            <figcaption class="portrait__tag">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 1 7 7c0 5.25-7 13-7 13S5 14.25 5 9a7 7 0 0 1 7-7zm0 4.5A2.5 2.5 0 1 0 12 11.5 2.5 2.5 0 0 0 12 6.5z"/></svg>
+              <!-- TODO: 替换为你的城市 -->
+              China · Developer
+            </figcaption>
+          </figure>
+          <div class="float-card float-card--code" aria-hidden="true">
+            <span class="float-card__dot float-card__dot--r"></span>
+            <span class="float-card__dot float-card__dot--y"></span>
+            <span class="float-card__dot float-card__dot--g"></span>
+            <pre><code>while (alive) {
+  build();
+  learn();
+}</code></pre>
+          </div>
+          <div class="float-card float-card--chip" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.4H22l-6 4.4 2.3 7.2-6.3-4.6-6.3 4.6L8 13.8 2 9.4h7.6z"/></svg>
+            持续构建中
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技术关键词跑马灯 -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <div class="marquee__group">
+          <span>HTML</span><i></i><span>CSS</span><i></i><span>JavaScript</span><i></i><span>TypeScript</span><i></i><span>React</span><i></i><span>Vue</span><i></i><span>Node.js</span><i></i><span>Python</span><i></i><span>Git</span><i></i><span>Docker</span><i></i><span>Linux</span><i></i><span>VS Code</span><i></i>
+        </div>
+        <div class="marquee__group">
+          <span>HTML</span><i></i><span>CSS</span><i></i><span>JavaScript</span><i></i><span>TypeScript</span><i></i><span>React</span><i></i><span>Vue</span><i></i><span>Node.js</span><i></i><span>Python</span><i></i><span>Git</span><i></i><span>Docker</span><i></i><span>Linux</span><i></i><span>VS Code</span><i></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- 关于 -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <p class="section__kicker reveal">01 · About</p>
+        <div class="about__grid">
+          <div class="about__intro">
+            <h2 class="section__title reveal" data-delay="1" id="about-title">关于我</h2>
+            <p class="about__lead reveal" data-delay="2">
+              我相信好的产品是「想清楚」与「做出来」的交集。
+            </p>
+          </div>
+          <div class="about__body">
+            <p class="reveal" data-delay="2">
+              我是一名开发者，目前专注于 Web 开发。从一行行代码到完整的产品体验，
+              我享受把模糊的想法逐步打磨成清晰、可用、优雅的作品的过程。
+            </p>
+            <p class="reveal" data-delay="3">
+              工作之外，我喜欢逛开源社区、研究有趣的小工具，
+              也在这个仓库里折腾我的第一个 GitHub Pages 网站。
+              如果哪天你在这里发现一个新项目，那一定是我又想到了什么好玩的东西。
+            </p>
+            <ul class="about__facts reveal" data-delay="4">
+              <li>
+                <span class="about__fact-label">目前状态</span>
+                <span class="about__fact-value"><span class="status-dot" aria-hidden="true"></span>开放交流，欢迎合作</span>
+              </li>
+              <li>
+                <span class="about__fact-label">专注方向</span>
+                <span class="about__fact-value">前端工程 · 全栈实践 · 自动化</span>
+              </li>
+              <li>
+                <span class="about__fact-label">加入 GitHub</span>
+                <span class="about__fact-value" id="github-since">2025 年</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 技能 -->
+    <section class="section section--alt" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <p class="section__kicker reveal">02 · Skills</p>
+        <h2 class="section__title reveal" data-delay="1" id="skills-title">技能栈</h2>
+        <p class="section__sub reveal" data-delay="2">一点点积累起来的工具箱，还在不断扩充。</p>
+
+        <div class="bento">
+          <article class="bento__card bento__card--wide reveal" data-delay="2">
+            <div class="bento__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M3 4h18v2H3zm0 5h12v2H3zm0 5h18v2H3zm0 5h12v2H3z"/></svg>
+            </div>
+            <h3>前端开发</h3>
+            <p>语义化 HTML、现代 CSS、原生 JavaScript 与主流框架，注重可访问性与性能。</p>
+            <ul class="tags">
+              <li>HTML5</li><li>CSS3</li><li>JavaScript</li><li>TypeScript</li><li>React</li><li>Vue</li>
+            </ul>
+          </article>
+
+          <article class="bento__card reveal" data-delay="3">
+            <div class="bento__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 2 3 7v10l9 5 9-5V7zm0 2.2 6.5 3.6L12 11.4 5.5 7.8zM5 9.7l6 3.4v6l-6-3.3zm8 9.4v-6l6-3.4v6.1z"/></svg>
+            </div>
+            <h3>后端与工具</h3>
+            <p>用 Node.js 和 Python 搭建服务，也热衷于用工具把重复的事情自动化。</p>
+            <ul class="tags">
+              <li>Node.js</li><li>Python</li><li>REST API</li>
+            </ul>
+          </article>
+
+          <article class="bento__card reveal" data-delay="4">
+            <div class="bento__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.4 16.6 4.8 12l4.6-4.6L8 6l-6 6 6 6zm5.2 0 4.6-4.6-4.6-4.6L16 6l6 6-6 6z"/></svg>
+            </div>
+            <h3>工程实践</h3>
+            <p>Git 工作流、代码审查、CI/CD，以及把项目部署上线的完整闭环。</p>
+            <ul class="tags">
+              <li>Git</li><li>GitHub Actions</li><li>Pages</li>
+            </ul>
+          </article>
+
+          <article class="bento__card reveal" data-delay="5">
+            <div class="bento__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36A5.39 5.39 0 0 1 16.5 13 5.5 5.5 0 1 1 12 3zm0-2a11 11 0 1 1-11 11c0-1.6.9-3 2.2-3.7A7 7 0 0 1 19 10.3c0 .6-.1 1.2-.2 1.7A9 9 0 0 0 12 1z"/></svg>
+            </div>
+            <h3>持续学习</h3>
+            <p>对新技术和新工具保持好奇，最近在研究 AI 应用与效率工具。</p>
+            <ul class="tags">
+              <li>AI 应用</li><li>效率工具</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 项目 -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <p class="section__kicker reveal">03 · Projects</p>
+        <div class="section__head">
+          <div>
+            <h2 class="section__title reveal" data-delay="1" id="projects-title">开源项目</h2>
+            <p class="section__sub reveal" data-delay="2">实时同步自我的 GitHub 仓库，数据来自 GitHub API。</p>
+          </div>
+          <a class="section__link reveal" data-delay="2" href="https://github.com/ZYJ-HAK?tab=repositories" target="_blank" rel="noopener noreferrer">
+            查看全部
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+
+        <div class="repo-grid" id="repo-grid" aria-live="polite">
+          <!-- 骨架屏（JS 加载数据后替换） -->
+          <div class="repo-skeleton"></div>
+          <div class="repo-skeleton"></div>
+          <div class="repo-skeleton"></div>
+        </div>
+        <p class="repo-error" id="repo-error" hidden>
+          暂时无法获取仓库数据，请
+          <a href="https://github.com/ZYJ-HAK?tab=repositories" target="_blank" rel="noopener noreferrer">前往 GitHub 查看</a>。
+        </p>
+      </div>
+    </section>
+
+    <!-- 联系 -->
+    <section class="section section--contact" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="contact reveal">
+          <p class="section__kicker">04 · Contact</p>
+          <h2 class="contact__title" id="contact-title">一起做点<br />有趣的事</h2>
+          <p class="contact__sub">
+            无论是项目合作、技术交流，还是单纯打个招呼，都欢迎通过 GitHub 找到我。
+          </p>
+          <a class="btn btn--primary btn--lg" href="https://github.com/ZYJ-HAK" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true" class="icon-github"><path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.55 0-.27-.01-1.17-.02-2.12-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.19 1.76 1.19 1.03 1.76 2.69 1.25 3.35.96.1-.75.4-1.25.72-1.54-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11.1 11.1 0 0 1 5.78 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.06.78 2.14 0 1.55-.01 2.79-.01 3.17 0 .31.21.67.8.55A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5z"/></svg>
+            GitHub 上找我
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__note"> Designed &amp; built by ZYJ_HAK · Powered by GitHub Pages</p>
+      <a href="#top" class="footer__top">回到顶部 ↑</a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
